@@ -1,0 +1,46 @@
+---
+title: Notes for Session00 Installations
+author:
+- name: Goran S. Milovanovic, PhD
+abstract: 
+output:
+  html_document:
+    toc: yes
+    toc_depth: 5
+    toc_float: true
+    theme: cosmo
+    highlight: textmate
+---
+
+***
+# Notes 00: Installations, Organization, Intro Readings 
+
+```{}
+### devsify.ai
+### Notes for Session00 Installations
+
+
+# Summon the iris dataset
+data(iris)
+iris
+
+# R native pipe operator
+iris |> 
+  dplyr::select("Sepal.Length", "Sepal.Width") |> 
+  dplyr::filter(Sepal.Length > 5.843)
+
+# Load tidyverse
+library(tidyverse)
+
+# The famous "old" %>% pipe operator
+iris %>% s
+  dplyr::select("Sepal.Length", "Sepal.Width") %>% 
+  dplyr::filter(Sepal.Length > 5.843)
+```
+
+***
+License: [GPLv3](http://www.gnu.org/licenses/gpl-3.0.txt)
+This Notebook is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+This Notebook is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+You should have received a copy of the GNU General Public License along with this Notebook. If not, see <http://www.gnu.org/licenses/>.
+

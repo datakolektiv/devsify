@@ -1,0 +1,201 @@
+---
+title: Lab01 Data Types, Especially Lists in R
+author:
+- name: Goran S. Milovanovic, PhD
+abstract: 
+output:
+  html_document:
+    toc: yes
+    toc_depth: 5
+    toc_float: true
+    theme: cosmo
+    highlight: textmate
+---
+
+***
+# Labs 01: A Very Basic Introduction to Data Types and Lists in R 
+**Feedback** should be send to `goran.milovanovic@datakolektiv.com`. 
+### 0. Data Types in R
+
+Some datasets come with the R programming language, e.g., the famous `iris`:
+
+```{r echo = T, eval = T, message = F}
+data(iris)
+head(iris, 10)
+```
+
+The function `head()`: show me the first n rows of a data.frame! Similarly, the function `tail()`:
+
+```{r echo = T, eval = T, message = F}
+tail(iris, 10)
+```
+
+returns the last n rows of a data.frame.
+
+```{r echo = T, eval = T, message = F}
+my_vector <- c(1, 7, 9, 10, 14, 22, 3.14, 2.71, 99)
+head(my_vector, 5)
+```
+
+```{r echo = T, eval = T, message = F}
+tail(my_vector, 5)
+```
+
+### 1. Lists
+
+*Lists* are very important in R. Let's create one:
+
+```{r echo = T, eval = T, message = F}
+my_list <- list(element_1 = 1,
+                element_2 = "Belgrade", 
+                element_3 = TRUE)
+str(my_list)
+```
+
+The function `str()` in R is generic, meaning it can be used on objects of *different classes*. We will discuss this further during the course.
+
+Here’s another list describing a person:
+
+```{r echo = T, eval = T, message = F}
+person <- list(name = "Mark",
+               family_name = "Smith",
+               phone = "+381661722838383", 
+               email = "mark.smith@rcourses.org", 
+               age = 40,
+               gender = "M", 
+               employed = TRUE)
+person
+```
+
+Anything can be an element of a list in R—even an entire data.frame:
+
+```{r echo = T, eval = T, message = F}
+person <- list(name = "Mark",
+               family_name = "Smith",
+               phone = "+381661722838383", 
+               email = "mark.smith@rcourses.org", 
+               age = 40,
+               gender = "M", 
+               employed = TRUE, 
+               favorite_dataset = "iris", 
+               favorite_dataset_source = iris)
+```
+
+Lists can be nested:
+
+```{r echo = T, eval = T, message = F}
+ll <- list(e1 = 10, 
+           e2 = 20, 
+           e3 = list(
+             e1 = 20,
+             e2 = 40,
+             e3 = 15
+           ), 
+           e4 = 40,
+           e5 = list(
+             e1 = 12
+           ))
+ll
+```
+
+For example, data structures describing people via R lists:
+
+```{r echo = T, eval = T, message = F}
+persons <- list(name = c("Mark", "Jane"),
+                family_name = c("Smith", "Doe"),
+                phone = c("+381661722838383", "+381661722838384"),
+                email = c("mark.smith@rcourses.org", "jane.doe@rcourses.org"), 
+                age = c(40, 42),
+                gender = c("M", "F"),
+                employed = c(TRUE, FALSE)
+                )
+```
+
+Accessing list elements:
+
+```{r echo = T, eval = T, message = F}
+persons[[1]]
+```
+
+Accessing elements of a *named* list:
+
+```{r echo = T, eval = T, message = F}
+persons$family_name[2]
+```
+
+The logic of structuring data is *key* in Data Science. Here’s a better way to describe people, e.g., employees in a company, using lists:
+
+```{r echo = T, eval = T, message = F}
+persons <- list(
+  p1 = list(name = "Mark",
+            family_name = "Smith",
+            phone = "+381661722838383",
+            email = "mark.smith@rcourses.org",
+            age = 40,
+            gender = "M",
+            employed = TRUE
+            ),
+  p2 = list(name = "Jane",
+            family_name = "Doe",
+            phone = "+381661722838385",
+            email = "jane.doe@rcourses.org",
+            age = 42,
+            gender = "F",
+            employed = FALSE
+            )
+)
+```
+
+Accessing list elements:
+
+```{r echo = T, eval = T, message = F}
+persons[[1]]
+```
+
+### 2. ```data.frame``` Class
+
+This class is essentially the central component we work with in the R programming language:
+
+```{r echo = T, eval = T, message = F}
+str(iris)
+```
+
+Unique elements of the variable (column, field, however you prefer) `Species` in `iris` using the function `unique()`:
+
+```{r echo = T, eval = T, message = F}
+unique(iris$Species)
+```
+
+Nesting function calls in R—something we do quite often. For example, "give me the length (length) of a vector obtained by listing the unique elements (unique) of the Sepal.Length column in iris" is written in R as:
+
+```{r echo = T, eval = T, message = F}
+length(
+  unique(
+    iris$Sepal.Length
+    )
+  )
+```
+
+`length()` returns the length of a vector or list:
+
+```{r echo = T, eval = T, message = F}
+length(iris$Sepal.Length)
+```
+
+`dim()` gives the dimensions of a data.frame, for example:
+
+```{r echo = T, eval = T, message = F}
+dim(iris)
+```
+
+`dim()` returns a vector (e.g., the number of rows and columns for the data.frame class). Remember that the result of a function in R can also be "subsetted," i.e., you can extract only the part of the result you need by indexing. For example, how many rows does `iris` have:
+
+```{r echo = T, eval = T, message = F}
+dim(iris)[1]
+```
+
+***
+License: [GPLv3](http://www.gnu.org/licenses/gpl-3.0.txt)
+This Notebook is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+This Notebook is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+You should have received a copy of the GNU General Public License along with this Notebook. If not, see <http://www.gnu.org/licenses/>.

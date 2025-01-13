@@ -1,0 +1,181 @@
+---
+title: Learning Resources
+author:
+- name: Goran S. Milovanovic, PhD
+abstract: 
+output:
+  html_document:
+    toc: yes
+    toc_depth: 5
+    toc_float: true
+    theme: cosmo
+    highlight: textmate
+---
+
+***
+**Feedback** should be send to `goran.milovanovic@datakolektiv.com`. 
+
+***
+
+### R + RStudio Desktop Installations
+
+**NOTE.** Please take care to install **the latest available versions**. At the time of this writing, those were:
+
+- Programming language R: `R-4.0.3`, [available here for Windows](https://cran.r-project.org/bin/windows/base/), [here for Mac](https://cran.r-project.org/bin/macosx/), and [here for Linux](https://cran.r-project.org/bin/linux/ubuntu/README.html).
+- RStudio Desktop: `RStudio Desktop 1.3.1093`, available [here](https://rstudio.com/products/rstudio/download/).
+
+
+Please follow the instructions provided here: 
+
+[Earth Data Analytics Online Certificate, 
+Lesson 1. Install & Set Up R and RStudio on Your Computer](https://www.earthdatascience.org/courses/earth-analytics/document-your-science/setup-r-rstudio/)
+
+Essentially, there are two installation steps: 
+
+- install R (the programming language)
+- install RStudio (your IDE, i.e. your working environment, where you write code, inspect data, etc.)
+
+**For Windows users:** [Video Instructions](https://www.youtube.com/watch?v=9-RrkJQQYqY&t=262s)
+
+**For Mac users:** [Video Instructions](https://www.youtube.com/watch?v=Y20P3u3c_1c)
+
+**For Linux users:** 
+
+- [Install R Instructions](https://www.digitalocean.com/community/tutorials/how-to-install-r-on-ubuntu-18-04-quickstart)
+- [Install RStudio Instructions](https://linuxconfig.org/how-to-install-rstudio-on-ubuntu-20-04-focal-fossa-linux)
+
+------
+
+### Learn R programming
+
+- [R for Data Science, Hadley Wickham & Garrett Grolemund](https://r4ds.had.co.nz/)
+- [R Programming - Dynamic Data Script](https://www.youtube.com/c/RProgrammingDDS): especially their [R Programming for Beginners | Complete Tutorial | R & RStudio](https://www.youtube.com/watch?v=BvKETZ6kr9Q) intro course
+- [Norman Matloff’s The Art of R Programming](https://www.google.com/search?client=firefox-b-d&channel=trow2&sxsrf=ALeKk03T_qLCMzRICYWj5UHqFBHnvfV6Uw%3A1607220795553&ei=Oz7MX8aeIYK6kwWc5JbgAw&q=Norman+Matloff+The+Art+of+R+Programming+pdf&oq=Norman+Matloff+The+Art+of+R+Programming+pdf&gs_lcp=CgZwc3ktYWIQAzIFCAAQyQM6BwgjEMkDECc6AgguUJk9WOdAYKRBaABwAHgAgAGHAYgB9QOSAQMwLjSYAQCgAQGqAQdnd3Mtd2l6wAEB&sclient=psy-ab&ved=0ahUKEwiGqOCEpLjtAhUC3aQKHRyyBTwQ4dUDCAw&uact=5)
+- [Advanced R, Hadley Wickham](https://adv-r.hadley.nz/) **NOTE.** Definitely not an introductory material.
+- [Tutorialspoint: Learn R Programming](https://www.tutorialspoint.com/r/index.htm)
+- [R in a Nutshell, 2nd Edition, by Joseph Adler](https://www.oreilly.com/library/view/r-in-a/9781449358204/)
+- [An Introduction to R - Notes on R: A Programming Environment for Data Analysis and Graphics, Version 4.1.1 (2021-08-10)](https://cran.r-project.org/doc/manuals/r-release/R-intro.pdf)
+- [R Tutorial from Quick-R](https://www.statmethods.net/r-tutorial/index.html)
+
+------
+
+### Computational Statistics and Machine Learning: General
+
+- [All of Statistics: A Concise Course in Statistical Inference, Larry Wasserman](https://link.springer.com/book/10.1007/978-0-387-21736-9)
+- [All of Nonparametric Statistics, Larry Wasserman](https://www.springer.com/gp/book/9780387251455)
+- [Learning statistics with R: A tutorial for psychology students and other beginners, Danielle Navarro](https://learningstatisticswithr.com/book/)
+- [An Introduction to Statistical Learning with Applications in R, Gareth James, Daniela Witten, Trevor Hastie and Robert Tibshirani](http://faculty.marshall.usc.edu/gareth-james/ISL/)
+- [Modern Statistics with R - From wrangling and exploring data to inference and predictive modelling, Måns Thulin, 2021-08-04 - Version 1.0.0](http://www.modernstatisticswithr.com/)
+- [Practical Data Science with R, Nina Zumel and John Mount](https://www.manning.com/books/practical-data-science-with-r)
+- [R (BGU course), Jonathan D. Rosenblatt, 2019-10-10](http://www.john-ros.com/Rcourse/)
+- [ISTA 321 - Data Mining, Nicholas DiRienzo, 2020-08-24](https://bookdown.org/ndirienzo/ista_321_data_mining/)
+- [Introduction to Econometrics with R, Christoph Hanck, Martin Arnold, Alexander Gerber, and Martin Schmelzer, 2021-10-06](https://www.econometrics-with-r.org/)
+- [An Introduction to Machine Learning with R, Laurent Gatto, 2020-02-28](https://lgatto.github.io/IntroMachineLearningWithR/)
+
+------
+
+### Simple and Multiple Linear Regression Models in R
+
+- [Introduction to Econometrics with R, Christoph Hanck, Martin Arnold, Alexander Gerber, and Martin Schmelzer, 2021-10-06, 4 Linear Regression with One Regressor](https://www.econometrics-with-r.org/4-lrwor.html)
+- [Introduction to Econometrics with R, Christoph Hanck, Martin Arnold, Alexander Gerber, and Martin Schmelzer, 2021-10-06, 6 Regression Models with Multiple Regressors](https://www.econometrics-with-r.org/6-rmwmr.html)
+- [An R Companion to Applied Regression, Third Edition, John Fox and Sanford Weisberg, 2019](https://socialsciences.mcmaster.ca/jfox/Books/Companion/)
+- [Linear Regression Using R: An Introduction to Data Modeling, Lilja, David J](https://conservancy.umn.edu/handle/11299/189222)
+- [Handbook of Regression Modeling in People Analytics, Keith McNulty](https://peopleanalytics-regression-book.org/index.html)
+- [r-statistics.co, Selva Prabhakaran - Linear-Regression](http://r-statistics.co/Linear-Regression.html)
+- [Complete Introduction to Linear Regression in R, Selva Prabhakaran](https://www.machinelearningplus.com/machine-learning/complete-introduction-linear-regression-r/)
+
+------
+
+### Generalized Linear Models in R
+
+- [R (BGU course), Jonathan D. Rosenblatt, 2019-10-10, Chapter 7: Generalized Linear Models](http://www.john-ros.com/Rcourse/glm.html)
+- [Generalized Linear Models in R, Social Science Computing Cooperative, University of Wisconsin–Madison](https://sscc.wisc.edu/sscc/pubs/glm-r/)
+- [Generalized Linear Models in R, Nathaniel E. Helwig, January 17, 2021](http://users.stat.umn.edu/~helwig/notes/generalized-linear-models.html)
+- [Generalized Linear Models With Examples in R (Springer Texts in Statistics), Peter K. Dunn, Gordon K. Smyth](https://www.amazon.com/Generalized-Linear-Examples-Springer-Statistics/dp/1441901175)
+- [Introduction to Econometrics with R, Christoph Hanck, Martin Arnold, Alexander Gerber, and Martin Schmelzer, 2021-10-06, 11 Regression with a Binary Dependent Variable](https://www.econometrics-with-r.org/11-rwabdv.html)
+
+------
+
+### Decision Tree and Random Forest Models in R
+
+- [Random Forests with R, Genuer, Robin, Poggi, Jean-Michel](https://www.springer.com/gp/book/9783030564841)
+- [Machine Learning with R, the tidyverse, and mlr, Hefin I. Rhys, Chapter 7. Classifying with decision trees](https://www.manning.com/books/machine-learning-with-r-the-tidyverse-and-mlr)
+- [ISTA 321 - Data Mining, Nicholas DiRienzo, 2020-08-24, 13 Decision Trees and Random Forests](https://bookdown.org/ndirienzo/ista_321_data_mining/decision-trees-and-random-forests.html)
+- [A Complete Guide to Random Forest in R, Listen Data, Deepanshu Bhalla](https://www.listendata.com/2014/11/random-forest-with-r.html)
+- [Introduction to decision trees and random forests, Ned Horning, American Museum of Natural History's, Center for Biodiversity and Conservation](http://www.woodwellclimate.org/wp-content/uploads/2016/02/Horning_DecisionTrees_RandomForest.pdf)
+- [A Comprehensive Guide To Random Forest In R, Zulaikha Lateef](https://www.edureka.co/blog/random-forest-classifier/)
+
+------
+
+### Data Visualization in R
+
+- [Data Visualization - A practical introduction, Kieran Healy](https://socviz.co/)
+- [Data Visualization with R, Rob Kabacoff, 2020-12-01](https://rkabacoff.github.io/datavis/)
+- [R for Data Science, Hadley Wickham & Garrett Grolemund, 3 Data visualisation](https://r4ds.had.co.nz/data-visualisation.html)
+- [R for Data Science, Hadley Wickham & Garrett Grolemund, 28 Graphics for communication](https://r4ds.had.co.nz/graphics-for-communication.html)
+- [R Graphics Cookbook, 2nd edition, Winston Chang, 2021-09-23](https://r-graphics.org/)
+- [htmlwidgets for R](https://www.htmlwidgets.org/)
+
+------
+
+### Learn R Markdown
+
+- [R Markdown: The Definitive Guide, Yihui Xie, J. J. Allaire, Garrett Grolemunds.](https://bookdown.org/yihui/rmarkdown/) 
+
+------
+
+### Data Sets
+
+#### [Inside Airbnb](http://insideairbnb.com/get-the-data/)
+
+This is a collection of frequently updated public Airbnb data sets which are nicely suited to practice basic data visualization and Exploratory Data Analysis (EDA). 
+
+#### [Wikimedia Foundation Product Analytics/Comparison datasets](https://www.mediawiki.org/wiki/Product_Analytics/Comparison_datasets)
+
+Data collected by Wikimedia Foundation's Product Analytics team on the development of different language versions of Wikipedia, the free encyclopedia. 
+
+#### [UCLA Statistical Methods and Data Analysis - LOGIT REGRESSION data set](https://stats.idre.ucla.edu/stat/data/binary.csv)
+
+A classic binary classification problem: predict a binary response variable `admit` from `gre`, `gpa`, and `rank`.
+
+#### [Household Size in the Philippines case study data set](https://bookdown.org/roback/bookdown-BeyondMLR/ch-poissonreg.html) from Beyond Multiple Linear Regression: Applied Generalized Linear Models and Multilevel Models in R, Paul Roback and Julie Legler
+
+An excellent data set to practice Poisson Regression from a classic GLM book in R.
+
+#### [Kaggle: The Boston Housing Dataset](https://www.kaggle.com/code/prasadperera/the-boston-housing-dataset)
+
+The Boston Housing Dataset is a derived from information collected by the U.S. Census Service concerning housing in the area of Boston MA. We will use it to practice Random Forest models for regression problems.
+
+#### [Kaggle: AirQualityUCI](https://www.kaggle.com/datasets/anveshparashar/airqualityuci)
+
+Predict Air Quality from the data recorede by a gas multisensor device deployed on the field.
+
+#### [Kaggle: Fish market](https://www.kaggle.com/datasets/anveshparashar/airqualityuci)
+
+Database of common fish species for fish market: build a predictive model to estimate if the weight of fish can be predicted.
+
+#### [Multiple Linear Regression: House Sales in King County, USA](https://www.kaggle.com/code/divan0/multiple-linear-regression/data).
+
+Predict the pricing of a property.
+
+#### [UCI Machine Learning repository: Wine Quality data set](https://archive.ics.uci.edu/ml/machine-learning-databases/wine-quality/)
+
+The goal of the exercise in which we use the Wine Quality dataset is to train a regularized Multinomial Regression model to predict the wine quality class.
+
+#### [Kaggle: Bank Customer Churn Prediction](https://www.kaggle.com/code/kmalit/bank-customer-churn-prediction)
+
+The task is to predict the `Exited` variable, making this pretty much a churn prediction problem.
+
+#### [UCI Machine Learning Repository: Online News Popularity Data Set](https://archive.ics.uci.edu/ml/datasets/Online+News+Popularity). E
+
+The task is to predict the **web popularity** of a post: the number of *shares* a post receives once it is published.
+
+### Additional Data Resources
+
+#### [Rdatasets](https://vincentarelbundock.github.io/Rdatasets/): Rdatasets is a collection of 1892 datasets which were originally distributed alongside the statistical software environment R and some of its add-on packages. The goal is to make these data more broadly accessible for teaching and statistical software development.
+
+***
+License: [GPLv3](http://www.gnu.org/licenses/gpl-3.0.txt)
+This Notebook is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+This Notebook is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+You should have received a copy of the GNU General Public License along with this Notebook. If not, see <http://www.gnu.org/licenses/>.
