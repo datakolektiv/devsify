@@ -1,0 +1,151 @@
+---
+title: Notes for Session04 More Functional Programming and Vectorization
+author:
+- name: Goran S. Milovanovic, PhD
+abstract: 
+output:
+  html_document:
+    toc: yes
+    toc_depth: 5
+    toc_float: true
+    theme: cosmo
+    highlight: textmate
+---
+
+***
+# Notes 04: More Functional Programming and Vectorization
+
+[Advanced R 2nd edition, Hadley Wickham, Chapter: Functional programming](https://adv-r.hadley.nz/fp.html)
+
+## Vectorization and Recycling
+
+#### Element-wise operations
+
+```{r echo=TRUE}
+### devsify.ai
+### Notes for Session04 More Functional Programming
+v1 <- c(1,2,3,4,5,17)
+print(v1)
+```
+
+```{r echo=TRUE}
+### devsify.ai
+### Notes for Session04 More Functional Programming
+a <- 5
+print(a[1])
+print(a)
+```
+
+```{r echo=TRUE}
+### devsify.ai
+### Notes for Session04 More Functional Programming
+v1 <- 5
+v2 <- c(2,3,4)
+print(v1 + v2)
+```
+
+```{r echo=TRUE}
+### devsify.ai
+### Notes for Session04 More Functional Programming
+v1 <- c(1,2,3)
+v2 <- c(2,3,4)
+print(v1 + v2)
+```
+
+```{r echo=TRUE}
+### devsify.ai
+### Notes for Session04 More Functional Programming
+v1 <- c(1,2)
+v2 <- c(2,3,4)
+print(v1 + v2)
+```
+
+```{r echo=TRUE}
+### devsify.ai
+### Notes for Session04 More Functional Programming
+v1 <- 5
+v2 <- c(2,3,4)
+print(v2 + v1)
+```
+
+
+## Lapply(), Sapply(), Apply()
+
+```{r echo=TRUE}
+### devsify.ai
+### Notes for Session04 More Functional Programming
+
+v1 <- 1:100
+
+# - power() function
+power <- function(x) {
+  # code blocks...
+  return(x^2)
+}
+
+# - silly functional:
+squares <- lapply(v1, power)
+class(squares)
+
+# - sapply():
+squares <- sapply(v1, power)
+class(squares)
+
+# - apply
+m1 <- matrix(data = c(1,2,3,4),
+             ncol = 2)
+sum(c(1,2))
+apply(X = m1, MARGIN = 1, FUN = sum)
+apply(X = m1, MARGIN = 2, FUN = sum)
+```
+
+
+## Reduce()
+
+```{r echo=TRUE}
+### devsify.ai
+### Notes for Session04 More Functional Programming
+
+```
+
+## Map()
+
+```{r echo=TRUE}
+### devsify.ai
+### Notes for Session04 More Functional Programming
+
+c1 <- c("Paris", "London")
+c2 <- c("France", "UK")
+m <- Map(paste, c1, c2)
+class(m)
+print(m)
+
+# a binary function
+f2 <- function(a, b) {
+  return(
+    a^2 + b
+  )
+}
+
+v1 <- 1:20
+v2 <- 21:40
+m <- Map(f2, v1, v2)
+print(m)
+
+```
+
+## Function Factories
+
+```{r echo=TRUE}
+### devsify.ai
+### Notes for Session04 More Functional Programming
+
+```
+
+
+***
+License: [GPLv3](http://www.gnu.org/licenses/gpl-3.0.txt)
+This Notebook is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+This Notebook is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+You should have received a copy of the GNU General Public License along with this Notebook. If not, see <http://www.gnu.org/licenses/>.
+
