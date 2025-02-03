@@ -21,6 +21,7 @@ output:
 ### What do we want to do today?
 
 This is the beginning of our journey into Data Science and Analytics in R. Thus far, we have been learning about R programming, more or less treating R as any other programming language. Now we begin to master the real power of R in its areas of specialization: analytics, statistics, machine learning, visualization, and reporting. And as you will see: in statistics, nothing compares to R.
+
 Exploratory Data Analysis (EDA) is a concept in Data Analytics/Statistics promoted by John Tukey in the 60s who defined **data analysis** as:
 
 > "Procedures for analyzing data, techniques for interpreting the results of such procedures, ways of planning the gathering of data to make its analysis easier, more precise or more accurate, and all the machinery and results of (mathematical) statistics which apply to analyzing data." 
@@ -29,7 +30,7 @@ Exploratory Data Analysis (EDA) is a concept in Data Analytics/Statistics promot
 
 EDA is a set of procedures, not strictly standardized, that is used to *understand* the data at hand before getting engaged in statistical/machine learning, hypothesis testing, and other heavy machinery found in the arsenal of contemporary Data Science. EDA is pretty much a thinking and creative step: it is when hypothesis generation should happen in the process. Before applying a statistical model to our data sets we first need to understand the properties of the data present there, and then only draw a conclusion on what mathematical model exactly should be used to learn more from them. Of course, hypothesis generation does not end in EDA. More often than not, one *EDA -> data modeling cycle* is followed by additional insights that lead to hypotheses about the data. Then we go back and perform some EDA again, and than perhaps model again, until we find out what is the most useful that can be learned from the present data in respect to the problem that we need to solve. In other words: EDA is found pretty much at the very core of Data Science and Analytics.
 
-Data visualization is used heavily in the EDA phase. Thus, in this Session 06: enter [{ggplot2}](https://ggplot2.tidyverse.org/), the industrial standard in data visualization, and in conjunction with some elements of [{dplyr}](https://dplyr.tidyverse.org/) and [{tidyr}(https://tidyr.tidyverse.org/)], a [{tidyverse}](https://www.tidyverse.org/) packages that suits the EDA step just perfectly.
+**Data visualization is used heavily in the EDA phase.**
 
 ### 1. Summarise a dataset
 
@@ -52,7 +53,7 @@ print(paste0("mtcars has ",
              " columns."))
 ```
 
-Let's learn about base R `summary()` function:
+Let's remind ourselves of the base R `summary()` function:
 
 ```{r echo = T}
 summary(mtcars)
@@ -87,6 +88,7 @@ range(mtcars$qsec)
 So the first element is the minimum and the second is the maximum. Then, maybe:
 
 ```{r echo = T}
+# NOTE: study this
 rangeQsec <- abs(Reduce("-", range(mtcars$qsec)))
 print(rangeQsec)
 ```
@@ -107,7 +109,7 @@ And the 50% quantile is the *median* of the `mtcars$qsec` variable.
 
 #### 1.2 The Boxplot: base R and then {ggplot2}
 
-Numbers and numbers only... Data visualization is *way better* to understand the data than by just looking at numbers. Let's begin with the base R function `boxplot()` to visualize only one variable, `mtcars$qsec`, and learn what boxplots are for. As you will see, they are among the most helpfull tools to understand the distribution of the values of some measurement in statistics.
+Numbers and numbers only... Data visualization is *way better* to understand the data than by just looking at numbers. Let's begin with the base R function `boxplot()` to visualize only one variable, `mtcars$qsec`, and learn what boxplots are for. As you will see, they are among the most helpful tools to understand the distribution of the values of some measurement in statistics.
 
 ```{r echo = T}
 boxplot(mtcars$qsec,
@@ -187,8 +189,6 @@ boxplot(mtcars[ , c('mpg', 'disp', 'hp', 'drat', 'wt', 'qsec')],
         main = "Boxplot: qsec")
 ```
 
-But is now also difficult to understand the distributions of a particular variable in the boxplot.
-
 While even base R offers great means to visualize data, {ggplot2} is the industrial standard data visualization package and it is definitely way, way better. We will now begin our study of the anatomy of a ggplot2 plot using our boxplot as an example.
 
 In order to produce a boxplot with ggplot2, mtcars first need to be transformed from the *wide data representation* format into a *long data representation format*:
@@ -196,24 +196,44 @@ In order to produce a boxplot with ggplot2, mtcars first need to be transformed 
 ```{r echo = T, warning = F, message = F}
 library(tidyverse)
 mtcars$id <- 1:dim(mtcars)[1]
-
 mtcarsPlot <- mtcars %>%
-  select(id, mpg, disp, hp, drat, wt, qsec) %>% 
-  pivot_longer(cols = -id,
-               names_to = "Measurement",
-               values_to = "Value")
+  dplyr::select(id, mpg, disp, hp, drat, wt, qsec) %>% 
+  tidyr::pivot_longer(cols = -id,
+                      names_to = "Measurement",
+                      values_to = "Value")
 
 head(mtcarsPlot, 30)
 ```
 
-Do you understand the difference between **long** and **wide** data formats? We will discuss it live in our session! The `select()` function used in the code above is from the `{dplyr}` package: it simply selects only the desired columns from a dataframe. Then, the `pivot_longer()` function, from the `{tidyr}` package, transform the wide `mtcars`into the long `mtcarsPlot` following the addition of the `id` column to `mtcars` because we want to keep track of the mapping between models (i.e. rows, records) in the original dataset and its long format! The **pipe operator** - `%>%` - works in the following way (note: a simplified explanation follows):
+Do you understand the difference between **long** and **wide** data formats? We will discuss it live in our session! The `select()` function used in the code above is from the `{dplyr}` package: it simply selects only the desired columns from a dataframe. Then, the `pivot_longer()` function, from the `{tidyr}` package, transform the wide `mtcars`into the long `mtcarsPlot` following the addition of the `id` column to `mtcars` because we want to keep track of the mapping between models (i.e. rows, records) in the original dataset and its long format! 
 
-- begin with a data set, pipe it to
-- a transformation, then pipe the result of the transformation to
-- another transformation, then ...
-- etc.
+Here is a step by step analysis of the code above:
 
-Pipes are **ideal** to chain data transformations in R!
+1. **Adding an `id` column to the `mtcars` data frame:**
+   ```R
+   mtcars$id <- 1:dim(mtcars)[1]
+   ```
+   - `mtcars` is a built-in data frame in R that contains various automobile data.
+   - `dim(mtcars)[1]` retrieves the number of rows in the `mtcars` data frame because `dim()` returns the dimensions of an object as a vector where the first element is the number of rows and the second element is the number of columns.
+   - `1:dim(mtcars)[1]` creates a sequence of numbers starting from 1 to the number of rows in `mtcars`.
+   - `mtcars$id <-` assigns this sequence to a new column in the `mtcars` data frame named `id`. This `id` column now acts as a unique identifier for each row (each car).
+
+2. **Creating a new data frame `mtcarsPlot` by selecting and transforming the `mtcars` data frame:**
+   ```R
+   mtcarsPlot <- mtcars %>%
+     dplyr::select(id, mpg, disp, hp, drat, wt, qsec) %>% 
+     tidyr::pivot_longer(cols = -id,
+                         names_to = "Measurement",
+                         values_to = "Value")
+   ```
+   - `mtcars %>%` takes the `mtcars` data frame and passes it on to the next function in the pipeline (denoted by `%>%`).
+   - `dplyr::select(id, mpg, disp, hp, drat, wt, qsec)` uses the `select` function from the `dplyr` package to keep only the columns `id`, `mpg` (miles per gallon), `disp` (displacement), `hp` (horsepower), `drat` (rear axle ratio), `wt` (weight), and `qsec` (1/4 mile time).
+   - `tidyr::pivot_longer(cols = -id, names_to = "Measurement", values_to = "Value")` transforms the data frame from wide to long format using `pivot_longer` from the `tidyr` package:
+     - `cols = -id` indicates that all columns except `id` should be transformed into two new columns.
+     - `names_to = "Measurement"` specifies that the original column names (like `mpg`, `disp`, etc.) should be placed in a new column called `Measurement`.
+     - `values_to = "Value"` specifies that the values from the original columns should be placed in a new column called `Value`.
+
+   The result of this transformation (`mtcarsPlot`) is a longer format data frame where each row represents one measurement (like `mpg` or `hp`) of a car. The `id` column links each measurement back to the original row in `mtcars`, making it easier to perform grouped analyses or plots where each car’s multiple attributes are needed in a tidy format. This format is particularly useful for plotting or statistical analysis in R.
 
 Now, the boxplot with {ggplot2}:
 
@@ -380,10 +400,10 @@ ggplot(mtcars,
 ```{r echo = TRUE, message = F, warning = F}
 distribution <- 
   mtcars %>% 
-  select(cyl, gear, qsec) %>% 
-  group_by(cyl, gear) %>% 
-  summarise(meanQsec = mean(qsec),
-            count = n())
+  dplyr::select(cyl, gear, qsec) %>% 
+  dplyr::group_by(cyl, gear) %>% 
+  dplyr::summarise(meanQsec = mean(qsec),
+                   count = n())
 print(distribution)
 ```
 
