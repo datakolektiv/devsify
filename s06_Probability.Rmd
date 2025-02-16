@@ -21,9 +21,9 @@ output:
 
 ### What do we want to do today?
 
-This is the beginning of our journey into Data Science and Analytics in R. Thus far, we have been learning about R programming, more or less treating R as any other programming language. Now we begin to master the real power of R in its areas of specialization: analytics, statistics, machine learning, visualization, and reporting. And as you will see: in statistics, nothing compares to R.
+Today, we begin laying the fundamental mathematical foundations for working in Data Science, which includes an introduction to probability theory. Probability theory is a branch of mathematics that deals with uncertain events—events that, as the name suggests, can occur only with some probability. But what does that mean? If something is uncertain, inherently unpredictable, is it even possible to describe it mathematically and treat it with the appropriate mathematical framework? The development of mathematics over the past three centuries, culminating in the 20th century, has shown that this is indeed possible. Probability theory is a mathematical discipline that connects the natural language we use to intuitively express ourselves about uncertain events with precise mathematical expressions. Through set theory, algebra, combinatorics, and mathematical analysis, it allows us to incorporate uncertain events into science and engineering.
 
-Exploratory Data Analysis (EDA) is a concept in Data Analytics/Statistics promoted by John Tukey in the 60s who defined **data analysis** as:
+The fundamental concepts we are introducing in this session are: event algebra, probability, random variables, distributions (discrete and continuous) of random variables, and the central limit theorem, whose significance in many empirical domains cannot be overstated.
 
 ## 0. Setup
 
@@ -41,7 +41,7 @@ And and - *The probability of drawing an Ace from a (fair) deck of cards?*
 
 ---
 
-Let's get back to the coin. $\frac{1}{2}$ says you. But what does it mean? Maybe you meant that out of two tossings you'll land exactly one Tails ($TH$ or $HT$)? Okay, let's toss a coin two times. I got $TT$. Maybe my assumption was wrong? Or I've just got unlucky? Let's toss it again. $HT$ this time. Maybe I'm actually right? Or I got lucky. Another two tosses! $HH$. Hmm... Unlucky again? But can I talk about luck in mathematics and in hypothesis testing?
+Let's get back to the coin. $\frac{1}{2}$ says you. But what does it mean? Maybe you meant that out of two tosses you'll land exactly one Tails ($TH$ or $HT$)? Okay, let's toss a coin two times. I got $TT$. Maybe my assumption was wrong? Or I've just got unlucky? Let's toss it again. $HT$ this time. Maybe I'm actually right? Or I got lucky. Another two tosses! $HH$. Hmm... Unlucky again? But can I talk about luck in mathematics and in hypothesis testing?
 
 What about the other answer: 50%. Does that mean that I'll land Tails exactly half the times when tossing a coin $N$ times? Let's toss it, say, 10 times. But I don't actually have a coin. Luckily I have R which can simulate tossing a coin. 
 
@@ -283,7 +283,7 @@ If we want to compute a probability of some union of mutually exclusive events, 
 
 And here's a nice reminder for $\sigma$-algebras and Kolmogorov Axioms:
 
-![](_img/prob.png)
+![](prob.png)
 These axioms have very usefull consequences; if $A$ and $B$ are two events, we have:
 
 $$ 1^\circ\ P(\emptyset) = 0, $$
@@ -1005,7 +1005,7 @@ $$F(a) = P(X\leqslant a) = \int_{-\infty}^a\varphi(x)dx.$$
 
 C.d.f of a continuous RV $X$ gives the probability of $X$ taking any value from the interval $(-\infty, a]$. Or, area under the p.d.f curve on that interval. Here's how one c.d.f. of a continuous RV looks like:
 
-![](_img/cdf.png)
+![](cdf.png)
 C.d.f. is a prety handy tool for computing probabilities of continuous RVs, even more useful than p.d.f! In fact, by knowing the c.d.f we can compute probabilites while avoiding integrals, using this formula:
 
 $$P(a \leqslant X \leqslant b) = F(b) - F(a).$$
