@@ -194,8 +194,13 @@ While even base R offers great means to visualize data, {ggplot2} is the industr
 In order to produce a boxplot with ggplot2, mtcars first need to be transformed from the *wide data representation* format into a *long data representation format*:
 
 ```{r echo = T, warning = F, message = F}
+# load tidyverse
 library(tidyverse)
+
+# introduce id column
 mtcars$id <- 1:dim(mtcars)[1]
+
+# wide to long transform
 mtcarsPlot <- mtcars %>%
   dplyr::select(id, mpg, disp, hp, drat, wt, qsec) %>% 
   tidyr::pivot_longer(cols = -id,
@@ -247,7 +252,7 @@ ggplot(data = mtcarsPlot,
   theme_bw() + 
   theme(panel.border = element_blank()) + 
   theme(plot.title = element_text(hjust = .5)) +
-  theme(legend.position = "top")
+  theme(legend.position = "right")
 ```
 
 **Note.** We use `+` to chain the layers in {ggplot2} visualizations, similarly as we use the pipes to chain data transformations. Do not confuse `+` as used to build a {ggplot2} visualization with `+` as an arithmetic operation or `%>%`.
@@ -258,7 +263,7 @@ We will play with various transformations of this boxplot in our session to lear
 ggplot(data = mtcars, 
        aes(x = hp, 
            y = qsec)) + 
-  geom_point(size = 2, color = "darkorange") +
+  geom_point(size = 2, color = "darkred") +
   ggtitle("mtcars: hp vs. qsec") + 
   theme_bw() +
   theme(panel.border = element_blank()) + 
@@ -271,9 +276,10 @@ ggplot(data = mtcars,
 ggplot(data = mtcars, 
        aes(x = hp, 
            y = qsec)) + 
-  geom_smooth(method = "lm", size = .25, color = "darkblue",) + 
+  geom_smooth(method = "lm", size = .25, color = "darkblue") + 
   geom_point(size = 2, color = "cadetblue3") +
-  ggtitle("mtcars: hp vs. qsec") + 
+  ggtitle("mtcars: hp vs. qsec") +
+  theme_bw() +
   theme(panel.border = element_blank()) + 
   theme(plot.title = element_text(hjust = .5))
 ```
@@ -282,7 +288,7 @@ Can our hypothesis be falsified? We will see in the remainder of the course. Now
 
 ```{r echo = T, warning = F, message = F}
 mtcarsPlot <- mtcars %>% 
-  select(hp, qsec)
+  dplyr::select(hp, qsec)
 
 mtcarsPlot$label <- paste0("(", 
                            mtcarsPlot$hp, ", ", 
@@ -294,7 +300,7 @@ ggplot(data = mtcarsPlot,
            label = label)) + 
   geom_smooth(method = "lm", size = .25, color = "cadetblue3") + 
   geom_point(size = 2, color = "cadetblue3") +
-  geom_text(size = 3) + 
+  geom_text(size = 2) + 
   ggtitle("mtcars: hp vs. qsec") + 
   theme_bw() +
   theme(panel.border = element_blank()) + 
@@ -306,7 +312,7 @@ Not readable enough? `install.packages(ggrepel)`. Now,
 ```{r echo = T, warning = F, message = F}
 library(ggrepel)
 mtcarsPlot <- mtcars %>% 
-  select(hp, qsec)
+  dplyr::select(hp, qsec)
 mtcarsPlot$label <- paste0("(", 
                            mtcarsPlot$hp, ", ", 
                            mtcarsPlot$qsec, 
@@ -317,7 +323,7 @@ ggplot(data = mtcarsPlot,
            label = label)) + 
   geom_smooth(method = "lm", size = .25, color = "cadetblue3") + 
   geom_point(size = 1.5, color = "cadetblue3") +
-  geom_text_repel(size = 3) + 
+  geom_text_repel(size = 2.5) + 
   ggtitle("mtcars: hp vs. qsec") + 
   theme(panel.border = element_blank()) + 
   theme(plot.title = element_text(hjust = .5))
@@ -329,9 +335,9 @@ ggplot(data = mtcarsPlot,
 
 ```{r echo = T, warning = F, message = F}
 mtcarsPlot <- mtcars %>% 
-  select(cyl) %>% 
-  group_by(cyl) %>% 
-  summarise(count = n())
+  dplyr::select(cyl) %>% 
+  dplyr::group_by(cyl) %>% 
+  dplyr::summarise(count = n())
 mtcarsPlot
 ```
 
@@ -379,6 +385,7 @@ ggplot(mtcars,
   theme(panel.border = element_blank()) +
   theme(plot.title = element_text(hjust = .5))
 ```
+
 The overall distribution of `mtcars$hp` is:
 
 ```{r echo=TRUE}
@@ -395,7 +402,7 @@ ggplot(mtcars,
 
 ### 3. Cross-Tabulations and Aggregations
 
-**Q.** How is the average `qsec` distributed across `cyl` and `gear` in `mtcars`? Remember `table()`:
+**Q.** How is the average `qsec` distributed across `cyl` and `gear` in `mtcars`?
 
 ```{r echo = TRUE, message = F, warning = F}
 distribution <- 
@@ -446,7 +453,6 @@ ggplot(distribution,
 ### Further Readings
 
 - [Chapter 7, Exploratory Data Analysis, from from R for Data Science, Hadley Wickham & Garrett Grolemund](https://r4ds.had.co.nz/exploratory-data-analysis.html)
-- Everything from [Chapter 7, Exploratory Data Analysis, from from R for Data Science, Hadley Wickham & Garrett Grolemund](https://r4ds.had.co.nz) on {ggplot2}.
 
 ### Important sources, documentation, etc.
 

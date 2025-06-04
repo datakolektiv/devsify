@@ -1,0 +1,70 @@
+---
+title: Video Course (in Serbian)
+author:
+- name: Goran S. Milovanovic, PhD
+abstract: 
+output:
+  html_document:
+    toc: yes
+    toc_depth: 5
+    toc_float: true
+    theme: cosmo
+    highlight: textmate
+---
+
+[![](github.png)](https://github.com/datakolektiv)&nbsp;&nbsp;[![](linkedin.png)](https://www.linkedin.com/company/datakolektiv/)
+
+The complete playlist of the course **Introduction to the R Programming Language** that I conducted in collaboration with [Startit](https://startit.rs/).
+
+- The course is accompanied by code on the following GitHub pages: [Introduction to R Programming for Data Analysis](https://github.com/datakolektiv/UvodR).
+
+- Link to the YouTube playlist: [Introduction to the R Programming Language](https://www.youtube.com/playlist?list=PLji_uE7buef9bugJOnn4vwef_rz46rQeh)
+
+- In this course, I focus more on the basics of R programming rather than analytics and modeling; in various versions, I conducted this course voluntarily in collaboration with Startit, and it was attended by dozens of participants interested in starting careers in Data Analytics and Data Science.
+
+<br>
+
+**Introduction to the R Programming Language - Lesson 1**
+
+```{r echo = FALSE}
+library(vembedr)
+embed_url("https://www.youtube.com/watch?v=EnQo_WDH1L0&list=PLji_uE7buef9bugJOnn4vwef_rz46rQeh&index=1")
+```
+
+**Introduction to the R Programming Language - Lesson 2**
+
+```{r echo = FALSE}
+embed_url("https://www.youtube.com/watch?v=FKeCNePwo94&list=PLji_uE7buef9bugJOnn4vwef_rz46rQeh&index=2")
+```
+
+**Introduction to the R Programming Language - Lesson 3**
+
+```{r echo = FALSE}
+embed_url("https://www.youtube.com/watch?v=gfQt01cJ3as&list=PLji_uE7buef9bugJOnn4vwef_rz46rQeh&index=3")
+```
+
+**Introduction to the R Programming Language - Lesson 4**
+
+```{r echo = FALSE}
+embed_url("https://www.youtube.com/watch?v=R7KtxdMDhSE&list=PLji_uE7buef9bugJOnn4vwef_rz46rQeh&index=4")
+```
+
+**Introduction to the R Programming Language - Lesson 5**
+
+```{r echo = FALSE}
+embed_url("https://www.youtube.com/watch?v=XWsPC3W7HBE&list=PLji_uE7buef9bugJOnn4vwef_rz46rQeh&index=5")
+```
+
+**Introduction to the R Programming Language - Lesson 6**
+
+```{r echo = FALSE}
+embed_url("https://www.youtube.com/watch?v=K9jPCe4SqzY&list=PLji_uE7buef9bugJOnn4vwef_rz46rQeh&index=6")
+```
+
+**Introduction to the R Programming Language - Lesson 7**
+
+```{r echo = FALSE}
+embed_url("https://www.youtube.com/watch?v=KJQC7XaHcV4&list=PLji_uE7buef9bugJOnn4vwef_rz46rQeh&index=7")
+```
+
+

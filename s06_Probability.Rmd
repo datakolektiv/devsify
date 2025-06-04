@@ -154,6 +154,7 @@ exp_prob_df <- Reduce(rbind, exp_prob)
 # - Show me:
 print(exp_prob_df)
 ```
+
 Let's plot the results
 
 ```{r echo=TRUE, warning=FALSE, message=FALSE}
@@ -175,7 +176,7 @@ But, is there a way to calculate theoretical probability **exactly**?
 
 ## 2. $\sigma$-Algebra of Events and Theoretical Probability
 
-In order to be able to speak properly about theoretical probability (and be able to compute it), we need to introduce *$\sigma$-algebra of events* and *probability-as-a-measure*. We can consider $\sigma$-algebra of events as a family of sets where every set is an event, and every element of this event-set is an *outcome* for which consider the evenet realized, i.e. a *favorable outcome*. 
+In order to be able to speak properly about theoretical probability (and be able to compute it), we need to introduce *$\sigma$-algebra of events* and *probability-as-a-measure*. We can consider $\sigma$-algebra of events as a family of sets where every set is an event, and every element of this event-set is an *outcome* for which consider the event realized, i.e. a *favorable outcome*. 
 
 For example, if we toss a coin two times, then one event-set might be
 
@@ -318,13 +319,13 @@ This tells us how to simply calculate probability of a complementary event. If a
 
 $$4^\circ\ A\subseteq B \Rightarrow P(A) \leqslant P(B) $$
 
-If set $A$ is contained in set $B$, i.e. if all the outcomes favourable for event $A$ are also favourable for event $B$, then event $A$ has smaller (or equal) chances for realization than the event $B$. In other words - events with smaller set of favourable outcomes are less probable. 
+If set $A$ is contained in set $B$, i.e. if all the outcomes favorable for event $A$ are also favourable for event $B$, then event $A$ has smaller (or equal) chances for realization than the event $B$. In other words - events with smaller set of favorable outcomes are less probable. 
 
 ---
 
 $$ 5^\circ\ A,\ B\ {\rm indep.} \Rightarrow P(AB) = P(A)P(B).$$
 
-If two events are independant, then the probability of them both occuring is equal to the product of probabilites of each event occuring independantly. If we toss a coin two times, we can calculate
+If two events are independent, then the probability of them both occurring is equal to the product of probabilities of each event occurring independently. If we toss a coin two times, we can calculate
 
 $$P(HT) = P(H)P(T).$$
 
@@ -456,9 +457,13 @@ sample(choices, size = 1, prob = c(.2, .05, .45, .3))
 
 ```{r echo=TRUE, warning=FALSE, message=FALSE}
 choices <- c(-1, 0, 2, 4.6)
-result <- sample(choices, size = 100, prob = c(.2, .05, .45, .3), replace = TRUE)
+result <- sample(choices, 
+                 size = 100, 
+                 prob = c(.2, .05, .45, .3), 
+                 replace = TRUE)
 result
 ```
+
 ```{r echo=TRUE, warning=FALSE, message=FALSE}
 result_frame <- as.data.frame(table(result))
 result_frame
@@ -600,7 +605,8 @@ $$ X :
 Consider the following experiment: a person rolls a fair dice ten times. 
 **Q.** What is the probability of obtaining five or less sixes at random?
 
-We know that R’s `dbinom()` represents the binomial probability mass function (p.m.f.). 
+We know that R’s `dbinom()` represents the binomial probability mass function (p.m.f.).
+
 Let’s see: the probability of getting *exactly* five sixes at random is:
 
 ```{r echo=TRUE, warning=FALSE, message=FALSE}
@@ -653,7 +659,7 @@ pFiveAndLessSixes
 
 ```{r echo=TRUE, warning=FALSE, message=FALSE}
 # Generate a sample of random binomial variates:
-randomBinomials <- rbinom(n = 100, size = 1, p = .5)
+randomBinomials <- rbinom(n = 100, size = 10, p = .5)
 randomBinomials
 ```
 
@@ -863,8 +869,8 @@ Ok, then:
 poissonDeviates <- as.data.frame(poissonDeviates)
 poissonDeviates$id <- 1:dim(poissonDeviates)[1]
 poissonDeviates <- poissonDeviates %>% 
-  pivot_longer(cols = -id) %>% 
-  select(-name)
+  tidyr::pivot_longer(cols = -id) %>% 
+  dplyr::select(-name)
 poissonDeviates$id <- factor(poissonDeviates$id, 
                              levels = sort(unique(poissonDeviates$id)))
 ```
@@ -892,7 +898,7 @@ Let's study one important property of the Poisson distribution:
 ``` {r echo = T}
 lambda <- 1:100
 poissonMean <- sapply(lambda, function(x) {
-  mean(rpois(100000,x))
+  mean(rpois(100000, x))
 })
 poissonVar <- sapply(lambda, function(x) {
   var(rpois(100000,x))

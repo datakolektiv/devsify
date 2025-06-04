@@ -172,7 +172,9 @@ The task is to predict the **web popularity** of a post: the number of *shares* 
 
 ### Additional Data Resources
 
-#### [Rdatasets](https://vincentarelbundock.github.io/Rdatasets/): Rdatasets is a collection of 1892 datasets which were originally distributed alongside the statistical software environment R and some of its add-on packages. The goal is to make these data more broadly accessible for teaching and statistical software development.
+#### Rdatasets
+
+[Rdatasets](https://vincentarelbundock.github.io/Rdatasets/): Rdatasets is a collection of 1892 datasets which were originally distributed alongside the statistical software environment R and some of its add-on packages. The goal is to make these data more broadly accessible for teaching and statistical software development.
 
 ***
 License: [GPLv3](http://www.gnu.org/licenses/gpl-3.0.txt)

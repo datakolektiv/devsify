@@ -1,0 +1,29 @@
+---
+title: "Welcome"
+---
+
+![](DK_Logo_400.png){width=300px}
+
+### DataKolektiv is an open learning community dedicated to Data Science and Analytics, Machine Learning, Data Engineering, and AI in Belgrade, Serbia.
+
+#### **Devsify** is the name of our Data Science program spanning everything from zero-knowledge cold start in R and Python for Data Science to advanced topics in Machine Learning and AI. 
+
+#### All educational programs here are run by [Goran S. Milovanovic](https://www.linkedin.com/in/gmilovanovic/) (hopefully) with help from numerous friends, colleagues, and other members of the Data community in Belgrade, Serbia: see [MACHINERY](https://www.linkedin.com/company/92495599).
+
+![](GSM_Krakow2024_invert.jpg){width=300px}
+
+### Navigation Tips
+
+The **Sessions** menu contains lecture materials. It covers a progression through topics in R or Python programming, probability theory, information theory, and mathematical statistics, advancing to complex models and approaches in machine learning.
+
+**Labs** are topics already covered under Sessions, but when they require additional focus, they are given a lab.
+
+**Notes** are created during sessions and most often consist of reminders, commented code snippets, and similar small actions that aid learning and recollection.
+
+The **Video** section contains the complete YouTube playlist of the introductory course in R programming, conducted by Goran at the Startit Center in Belgrade (in Serbian).
+
+The **Resources** section provides an extremely useful overview of online learning materials, courses, books, and open datasets to explore and experiment with.
+
+**About** is about the Devsify idea, our philosophy, and the rules of this game.
+
+**Media** contains a selection of Goran's talks, workshops, interviews, etc., but over time it will evolve into an archive of our collective work in this learning community, becoming less and less about him.

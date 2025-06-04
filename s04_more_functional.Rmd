@@ -151,10 +151,10 @@ Introducing the `quantile()` function, `p=.25` for `Q1`:
 quantile(mtcars$mpg, p = .25)
 ```
 
-`p=.74` for `Q3`:
+`p=.75` for `Q3`:
 
 ```{r echo=TRUE}
-quantile(mtcars$mpg, p = .27)
+quantile(mtcars$mpg, p = .75)
 ```
 
 and of course, `p=.50` for the median:
@@ -320,10 +320,10 @@ library(tidyverse)
 mtcars$id <- 1:dim(mtcars)[1]
 
 mtcarsPlot <- mtcars %>%
-  select(id, mpg, disp, hp, drat, wt, qsec) %>% 
-  pivot_longer(cols = -id,
-               names_to = "Measurement",
-               values_to = "Value")
+  dplyr::select(id, mpg, disp, hp, drat, wt, qsec) %>% 
+  tidyr::pivot_longer(cols = -id,
+                      names_to = "Measurement",
+                      values_to = "Value")
 
 head(mtcarsPlot, 30)
 ```

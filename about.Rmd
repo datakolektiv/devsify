@@ -1,0 +1,166 @@
+---
+title: '**Devsify AI**'
+subtitle: '**Free, Open Educational Program in Data Science and Machine Learning**'
+---
+
+---
+
+### **Lecturer: [Dr Goran S. Milovanović](https://datakolektiv.com/app_direct/DataKolektivServer/media.html)**
+
+[![](github.png)](https://www.linkedin.com/in/gmilovanovic/)&nbsp;&nbsp;[![](linkedin.png)](https://www.linkedin.com/in/gmilovanovic/)&nbsp;&nbsp;[![](machinery.png)](https://www.linkedin.com/company/92495599)
+
+![](devsify_GSM500px__Banner.png){width=300px}
+
+![](devsify_DK_logo.png){width=300px}
+
+
+### **👾 APPLY() via [this form](https://docs.google.com/forms/d/e/1FAIpQLSeezKkYjTcXWqcXB9JnkzOk3KafOpCq6V5pdj1l7srz_HmNJg/viewform?usp=sf_link)**
+
+### **🤝 Completely online + in-person meetings for participants who choose to attend in Belgrade, Serbia**
+
+---
+
+Since its founding in 2017, [DataKolektiv](https://datakolektiv.com/) has trained over 150 participants, at various levels, in knowledge and skills in the fields of Data Analytics, Data Science, Machine Learning, and AI (not counting the dozens of participants I have taught through my collaboration with [Springboard](https://www.springboard.com/), and who knows how many I have trained in mathematical statistics as an independent consultant over the years...). As the founder of DataKolektiv, I have decided that from the fall of 2024, all DataKolektiv educational programs will become free and open, available to everyone. Considering that DataKolektiv has never (nor will it in the future) used pre-recorded materials, this education, which we are now making available to all, will include direct work with me.
+
+-- [Goran S. Milovanović](https://www.datakolektiv.com/app_direct/DataKolektivServer/media.html), 3. November, 2024.
+
+---
+
+## A Concise Manifesto
+
+This course is entirely practically oriented; I have always had more trust in people who may not know something about a thing but know how to do that thing in practice. It goes without saying that in the intense technological environment where Data Science, Machine Learning, and AI operate, we seek exactly that: people who can complete tasks from start to finish, solve problems, and deliver solutions. This is the wavelength on which I am broadcasting this free, open course. All of this does not mean that theory is unimportant: on the contrary, if something is significant, theory is significant, and I will teach it intensively. However, unlike academic programs where you receive both what you need and a lot of content that you may never use, I will focus on applicable theory that will help you understand the solutions to the problems you need to tackle—and help you solve them. Also, I do not advise you to avoid academic programs; on the contrary, I believe that rigorous academic education is a great thing, but keep in mind what decades of experience in these fields have taught me: those who were first trained as scientists in some particular empirical field are always better than the "Swiss-knife" people who learn Data Science and Machine Learning methods to apply them to just anything. "Pure number crunchers" do not exist; without appropriate domain expertise, it is difficult or impossible to enter the top tier and be at the forefront in these fields. Domain expertise matters.
+
+---
+
+## Program
+
+![](freeDK_Program.png){width=300px}
+
+With beginners, I focus on the basics of R and Python programming for Data Science and Machine Learning, followed by an introduction to probability theory, mathematical statistics, and information theory. **N.B.** I will use Python every now and then, but the focus of this program will be heavily on R. For intermediate and advanced participants, not necessarily in the following order, I focus on the following topics:
+
+- [Introductory and Advanced R programming](https://www.oreilly.com/library/view/the-art-of/9781593273842/)
+- [Functional and Objective Programming in R](https://adv-r.hadley.nz/index.html)
+- [The Tidyverse Approach](https://r4ds.hadley.nz/)
+- [Python for Data Science](https://www.w3schools.com/datascience/ds_python.asp)
+- [Probability](https://math.dartmouth.edu/~prob/prob/prob.pdf) and [Information Theory](https://www.inference.org.uk/itprnn/book.pdf)
+- [Estimation Theory](https://perso.telecom-paristech.fr/ciblat/summer_school/kam_tutorial.pdf)
+- [Optimization](https://www.researchgate.net/profile/Boris-Polyak-2/publication/342978480_Introduction_to_Optimization/links/5f1033e5299bf1e548ba4636/Introduction-to-Optimization.pdf)
+- [Parametric and Non-parametric Correlation](https://www.analyticsvidhya.com/blog/2022/11/parametric-and-non-parametric-correlation-in-data-science/)
+- [(Multiple) Linear Regression](https://uk.sagepub.com/en-gb/eur/applied-regression-analysis-and-generalized-linear-models/book237254)
+- [Generalized Linear Models](https://online.stat.psu.edu/stat504/lesson/6/6.1)
+   - Binomial
+   - Multinomial
+   - Poisson, Negative Binomial, Zero-inflated
+   - Tweedie
+- [Decision Trees](https://cran.r-project.org/web/packages/rpart/vignettes/longintro.pdf)
+- [Random Forests](https://victorzhou.com/blog/intro-to-random-forests/)
+- [Gradient Boosted Trees](https://en.wikipedia.org/wiki/Gradient_boosting)
+- [Neural Networks w. Backpropagation](https://cklixx.people.wm.edu/teaching/math400/Annette-paper.pdf)
+- [Principal Component Analysis](https://royalsocietypublishing.org/doi/10.1098/rsta.2015.0202)
+- [Singular Value Decomposition](https://en.wikipedia.org/wiki/Singular_value_decomposition)
+- [t-SNE dimensionality reduction](https://www.jmlr.org/papers/volume9/vandermaaten08a/vandermaaten08a.pdf)
+- [Bayesian Estimation](https://www.amazon.com/Bayesian-Statistics-Introduction-Peter-Lee/dp/0340677856)
+- [Latent Dirichlet Allocation(LDA)](https://www.jmlr.org/papers/volume3/blei03a/blei03a.pdf)
+- [Causal Models for Parameter and Structure Learning](https://ftp.cs.ucla.edu/pub/stat_ser/r350.pdf)
+- Numerical Simulations
+- Basic and Advanced Data Visualization:
+   - [ggplot2](https://ggplot2.tidyverse.org/)
+   - [Plotly](https://plotly.com/)
+   - [Bokeh](https://bokeh.org/)
+- R integration with Generative AI
+- R integration w. Microsoft Office
+- Various Domain-specific Problems
+- Mastering Your Linux OS for R and Python projects in Data Science
+- [R in Production Environments (testing, Docker and Docker Compose, deployment)](https://r-in-production.org/)
+
+We have more than enough teaching materials, developed over the years at DataKolektiv for the following courses:
+
+- **[R Advanced Analytics](https://github.com/datakolektiv/RAdvancedAnalytics)** This introductory R course provides a solid foundation in the most commonly used methods of supervised and unsupervised learning in data analytics; significant emphasis is placed on reporting and data visualization.
+
+- **[R Stats101 Bioinformatics](https://github.com/datakolektiv/rstats101_bioinformatics)** Despite the name "Bioinformatics," this is a course that should be taken by anyone interested in solidifying their knowledge of mathematical statistics, as the course focuses on probability theory and mathematical statistics.
+
+- **[DATA SCIENCE SESSIONS](https://github.com/datakolektiv/sessions_introR)** This, I can confidently say, legendary course within our R programmers and analysts community offers a thorough, comprehensive introduction to Data Science and Machine Learning. The Python version of the course, developed in collaboration with [Aleksandar Cvetković](https://www.linkedin.com/in/alegzndr/) and [Ilija Lazarević](https://www.linkedin.com/in/ilijalazarevic/): **[DATA SCIENCE SESSIONS :: Python Version](https://github.com/datakolektiv/dss03python2023)**
+
+For complete beginners in R programming, I recommend the free course Introduction to R Programming for Data Analysis, which I conducted in collaboration with [Startit](https://startit.rs/):
+
+- **[Introduction to R Programming YouTube Playlist](https://www.youtube.com/playlist?list=PLji_uE7buef9bugJOnn4vwef_rz46rQeh)**
+
+---
+
+## Rules
+
+![](freeDK_Rules.png){width=300px}
+
+**Rule 01. Course Methodology.** Each week, learning materials will be shared, and participants are expected to work on them independently over the following week, following my instructions and guidance. After one week, during an online session lasting between an hour and an hour and a half, I will explain all key aspects related to the topic covered. Sometimes, when introducing important new theoretical concepts, the session will take the form of *Ex Cathedra* teaching – though I try to avoid this as much as possible. What I greatly prefer, on the other hand, is interactive work and discussion. To achieve this, you need to prepare by studying the materials I will share in advance.
+
+**Rule 02. On datasets.** The data used in the course will exclusively be data that I select and share with you. This will include data from [Kaggle](https://www.kaggle.com/), various open data sources, a variety of datasets found through [Google Dataset Search](https://datasetsearch.research.google.com/), as well as classic teaching datasets. Can you use your own data during the course? *Of course not.* You can learn with me how things are done and understood using the data I provide, and then you can apply that knowledge to any business or research problem of your choice.
+
+**Rule 03. Open Source.** Everything we do is Open Source, full stop. I will be using the [GNU General Public License (GPLv3)](https://www.gnu.org/licenses/gpl-3.0.html).
+
+**Rule 04. Communication during the course.** The only communication channel I will use throughout the course is the `#data-science-4all` channel on the DataKolektiv Slack account, which all participants will be added to (if not already). **I will not be able to respond to emails.** For those in Belgrade or who visit occasionally, we can organize *ad hoc* in-person meetings with or without laptops, as we agree. All other communication will take place during the weekly online sessions. The rules for communication are simple: (1) *politeness*, (2) *respect for everyone*, (3) *honesty*, (4) *conciseness* (there are many of us—groups consist of 30 participants each).
+
+**Rule 05. About the course program.** I have specific, albeit broad, areas of specialization in Data Science, but I am by no means a jack-of-all-trades. Therefore, I design the course program and make decisions on when and what topics are covered. If someone has a suggestion for additional content, they will need to help find and involve an appropriate expert to assist us if it turns out that I am not knowledgeable about that topic, which, again, can easily happen.
+
+---
+
+## Expectations
+
+![](freeDK_Expectations.png){width=300px}
+
+**This open program does not provide any certificates or confirmations of participation.** The program focuses solely on **practice**. Once you are faced with a Data Science problem — whether at work, out of sheer curiosity, in a job interview, at university, or during fundamental scientific work — nobody will ask whether you have a certificate or diploma if you can solve the problem.
+
+The only ones I’ve seen who wanted to pursue Data Science and Machine Learning but didn’t succeed were those who didn’t listen to me when I advised them **to practice a little each day**. Learning programming and mathematics for these fields shares the same traits as learning any type of mathematics, any sport, or any musical instrument: there are concepts you need to understand and theory you need to learn, but if you don’t spend enough time practicing — no, you will not learn what you set out to learn. Again: a little every day. *Repetitio est mater studiorum.*
+
+**90% of what you do in this course will be your own independent work.** Personally, and as a representative of DataKolektiv, **I do not take any responsibility either (a) for your success in this course or how you feel about learning (or not learning), or (b) for any applications of what you learn in a professional, academic, or any other setting**. I have literally educated hundreds of people in these disciplines from the USA to Asia: those who learned, learned on their own. I am here to assist, clarify, and push you forward. You are the key to success; it lies within you.
+
+*"Disciplina motivationem ad ientaculum devorat."*
+
+(*"Discipline eats motivation for breakfast."*)
+
+-- Ivan Minić, [Pojačalo podcast](https://www.youtube.com/@Pojacalo).
+
+![](wd_thinkpad_official.png){width=500px}
+
+<span style="font-size:9pt;">These are photos of the Lenovo Thinkpad laptop I used between 2017 and 2022 while working on the Wikidata project with DataKolektiv. The red bounding boxes highlight the edge of the keyboard — where you rest your left hand when working. What looks like burn marks is actually the casing’s plastic dented by my hand. If you ever wonder how one succeeds in Data Science and Machine Learning—just remember this photo.</span>
+
+---
+
+## Tech Stack
+
+![](freeDK_TechStack.png){width=300px}
+
+I mainly use [R](https://www.r-project.org/about.html). However, the whole zoo encompasses: 
+
+- **R (beyond [Tidyverse](https://www.tidyverse.org/))**: 
+  - Front-end: ([Shiny](https://shiny.rstudio.com/), [R Markdown](https://rmarkdown.rstudio.com/) - I use either the [Open Source Shiny Server](https://rstudio.com/products/shiny/download-server/), or productionize with [golem](https://github.com/ThinkR-open/golem) and scale with [ShinyProxy](https://www.shinyproxy.io/) via [Docker](https://www.docker.com/)); visualizations: [ggplot2](https://ggplot2.tidyverse.org/), [Bokeh](https://hafen.github.io/rbokeh/), [Plotly](https://plotly.com/), [VisNetwork](https://datastorm-open.github.io/visNetwork/), [igraph](https://igraph.org/r/);
+  - Back-end/ML: [data.table](https://cran.r-project.org/web/packages/data.table/vignettes/datatable-intro.html), [text2vec](http://text2vec.org/), [maptpx](https://github.com/TaddyLab/maptpx), [Rtsne](https://github.com/jkrijthe/Rtsne), [XGBoost](https://xgboost.readthedocs.io/en/latest/), [Matrix](https://cran.r-project.org/web/packages/Matrix/index.html), [mclust](https://cran.r-project.org/web/packages/mclust/vignettes/mclust.html), [xgboost: Extreme Gradient Boosting](https://cran.r-project.org/web/packages/xgboost/index.html), [ordinal: Regression Models for Ordinal Data](https://cran.r-project.org/web/packages/ordinal/index.html) and probably many more;  
+- **Big Data and RDBS**: [Pyspark](https://spark.apache.org/docs/latest/api/python/index.html)/[Apache Spark](https://spark.apache.org/), [Hadoop](https://hadoop.apache.org/)/[HiveQL](https://en.wikipedia.org/wiki/Apache_Hive), and [MariaDB](https://mariadb.org/), typically for ETL from the WMF Data Lake and local project databases, and of course [PostgreSQL](https://www.postgresql.org/);
+- **Python Data/ML**: [NumPy](https://numpy.org/), [pandas](https://pandas.pydata.org/), [scikit-learn (sklearn)](https://scikit-learn.org/), [SciPy](https://scipy.org/), [Matplotlib](https://matplotlib.org/), [Seaborn](https://seaborn.pydata.org/), [Plotly](https://plotly.com/python/); 
+- **Standards**: [XML](https://www.w3.org/XML/), [JSON](https://www.json.org/json-en.html), [RDF](https://www.w3.org/RDF/) (code parameterizations, [Wikidata dump processing](https://www.wikidata.org/wiki/Wikidata:Database_download));
+- **IDEs**: of course [RStudio](https://rstudio.com/) is my favorite IDE, but also [Visual Studio Code](https://code.visualstudio.com/).
+
+**GitHub**
+
+- Goran: [github.com/GoranMilovanovic](https://github.com/GoranMilovanovic)
+- DataKolektiv: [github.com/datakolektiv](https://github.com/datakolektiv)
+
+---
+
+## About me
+
+![](GSM_Krakow2024.jpg){width=300px}
+
+In 2017, I founded [DataKolektiv](https://datakolektiv.com/app_direct/DataKolektivServer/index.html) after nearly 25 years in academic and applied science and research. Between 2017 and 2022, I worked as a Data Scientist for [Wikidata](https://www.wikidata.org/wiki/Wikidata:Main_Page), one of the world’s largest and most complex Open Knowledge Bases, where I provided full-stack Data Science services. These services encompassed ETL/pre-processing in Big Data systems, machine learning, and creating custom dashboards for virtualized production environments using R and Python. More details can be found in my [Wikidata Analytics System Repo](https://github.com/datakolektiv/analytics-wmde-WD-WikidataAnalytics). 
+
+DataKolektiv has also been at the forefront of innovation, offering expert consulting services to top Swiss banking institutions and global market research firms. It has played a crucial role in training numerous professionals in Data Analytics, Data Science, and Machine Learning across local and Western European markets. As one of the earliest consultancies to embrace Generative AI, we have guided others through this new technological era.
+
+I have co-edited and co-authored five books on Internet user behavior and attitudes, which cover theoretical aspects of Information Society development and Internet Governance. My academic background includes significant research on human associative and semantic memory, concepts and categorization, statistical causal induction, and decision-making under risk. Collaborating with leading Cognitive Scientists in concept learning, my work was cited in [The Stevens' Handbook of Experimental Psychology, Volume 3. Language and Thought](https://onlinelibrary.wiley.com/doi/abs/10.1002/9781119170174.epcn309).
+
+Programming has been a part of my life since 1984, beginning in the 8-bit era. At sixteen, I published my first review of a PASCAL compiler, and at nineteen, I wrote my first scientific paper in Cognitive Psychology. Since then, my career has intersected computer science, mathematical statistics, and social sciences.
+
+Currently, I am the Chief AI Officer at [smartocto](https://smartocto.com/). Outside of work, I am a proud father to two wonderful daughters, Sofija and Teodora. Playing the electric bass guitar (see [motor skill learning](https://www.researchcatalogue.net/view/497578/497579)) embodies my commitment to lifelong learning: *[ancora imparo](https://en.wikiquote.org/wiki/Michelangelo)* (misattributed to Michelangelo Buonarroti). I maintain a modest collection of visual arts and co-manage the [GEOMETRIJA](https://geometrija.org/) project with my partner, Serbian painter and art history PhD [Miona Marta Marković](https://www.google.com/search?q=Miona+Marta+Markovi%C4%87&rlz=1C5CHFA_enRS978RS978&oq=Miona+Marta+Markovi%C4%87&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIGCAEQIxgnMggIAhAAGBYYHjIKCAMQABiABBiiBDIKCAQQABiABBiiBDIKCAUQABiABBiiBDIKCAYQABiABBiiBDIGCAcQRRg90gEINDk3NGowajeoAgCwAgA&sourceid=chrome&ie=UTF-8). The story of my journey was shared during my first meeting with Ivan Minić on the [Pojačalo](https://www.youtube.com/watch?v=ggtP1t6ZFNM) podcast.
+
+---
+
+## **👾 APPLY() via [this form](https://docs.google.com/forms/d/e/1FAIpQLSeezKkYjTcXWqcXB9JnkzOk3KafOpCq6V5pdj1l7srz_HmNJg/viewform?usp=sf_link)**
+
